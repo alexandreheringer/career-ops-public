@@ -1,0 +1,46 @@
+{
+  "name": "career-ops-plugins",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "jd:gather": "node \"10-20 Modules/01_jd-ready/gather.mjs\"",
+    "jd:gather:dry": "node \"10-20 Modules/01_jd-ready/gather.mjs\" --dry-run",
+    "teal:import": "node \"10-20 Modules/02_search-teal/import-teal.mjs\"",
+    "teal:import:dry": "node \"10-20 Modules/02_search-teal/import-teal.mjs\" --dry-run",
+    "batch:submit": "node \"10-20 Modules/03_batch-anthropic/batch-api-submit.mjs\"",
+    "batch:submit:dry": "node \"10-20 Modules/03_batch-anthropic/batch-api-submit.mjs\" --dry-run",
+    "batch:collect": "node \"10-20 Modules/03_batch-anthropic/batch-api-collect.mjs\"",
+    "dashboard:apply": "node \"10-20 Modules/04_dashboard/apply.mjs\"",
+    "dashboard:check": "node \"10-20 Modules/04_dashboard/apply.mjs\" --check",
+    "dashboard:revert": "node \"10-20 Modules/04_dashboard/apply.mjs\" --revert",
+    "scan:gupy": "node \"10-20 Modules/05_scan-gupy/scan-gupy.mjs\"",
+    "scan:gupy:dry": "node \"10-20 Modules/05_scan-gupy/scan-gupy.mjs\" --dry-run",
+    "scan:indeed": "node \"10-20 Modules/06_scan-indeed/scan-indeed.mjs\"",
+    "scan:indeed:dry": "node \"10-20 Modules/06_scan-indeed/scan-indeed.mjs\" --dry-run",
+    "scan:linkedin": "node \"10-20 Modules/07_scan-linkedin/scan-linkedin.mjs\"",
+    "scan:linkedin:dry": "node \"10-20 Modules/07_scan-linkedin/scan-linkedin.mjs\" --dry-run",
+    "test": "node --test \"10-20 Modules/01_jd-ready/**/*.test.mjs\" \"10-20 Modules/02_search-teal/**/*.test.mjs\" \"10-20 Modules/03_batch-anthropic/**/*.test.mjs\" \"10-20 Modules/04_dashboard/**/*.test.mjs\" \"10-20 Modules/05_scan-gupy/**/*.test.mjs\" \"10-20 Modules/06_scan-indeed/**/*.test.mjs\" \"10-20 Modules/07_scan-linkedin/**/*.test.mjs\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{mjs,js}\"",
+    "format:check": "prettier --check \"**/*.{mjs,js}\"",
+    "verify": "npm run lint && npm run format:check && npm test",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0",
+    "dotenv": "^17.0.0",
+    "js-yaml": "^5.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.9.9"
+  }
+}

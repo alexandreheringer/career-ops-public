@@ -1,0 +1,28 @@
+# Upstream checkout. It keeps its own git history and is updated on its own.
+/career-ops/
+
+.DS_Store
+**/.DS_Store
+
+.env
+**/.env
+!**/.env.example
+
+node_modules/
+
+# Índice de contrato do jd-ready. Runtime, reconstruível a partir de career-ops/jds/.
+# O texto das vagas é conteúdo de terceiros e não é commitado — ver Actual Architecture.md §9.
+10-20 Modules/01_jd-ready/jd-ready.tsv
+
+# CSVs do Teal: shortlist pessoal, não vai para o repositório. As pastas ficam.
+10-20 Modules/02_search-teal/inbox/*
+!10-20 Modules/02_search-teal/inbox/.gitkeep
+10-20 Modules/02_search-teal/processed/*
+!10-20 Modules/02_search-teal/processed/.gitkeep
+
+# Backup que o dashboard apply tira antes de editar o career-ops/web.
+10-20 Modules/04_dashboard/.backup/
+
+# Personal candidate context (CV, strategy, etc.)
+00.alex_input/
+

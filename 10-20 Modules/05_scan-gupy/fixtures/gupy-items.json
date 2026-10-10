@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Analista de Dados",
+    "jobUrl": "https://acme.gupy.io/job/1",
+    "careerPageDisplayName": "Acme",
+    "city": "São Paulo",
+    "state": "SP"
+  },
+  {
+    "title": "Engenheiro de Dados",
+    "url": "https://beta.gupy.io/job/2",
+    "company": "Beta"
+  },
+  {
+    "name": "Sem link",
+    "careerPageDisplayName": "Gamma"
+  }
+]
